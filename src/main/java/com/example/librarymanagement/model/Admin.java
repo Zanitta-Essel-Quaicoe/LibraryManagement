@@ -1,4 +1,4 @@
 package com.example.librarymanagement.model;
 
-public class User {
+public class Admin {
 }

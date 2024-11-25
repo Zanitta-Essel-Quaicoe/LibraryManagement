@@ -8,14 +8,14 @@
     <children>
         <VBox alignment="CENTER" spacing="20" layoutX="50.0" layoutY="50.0" prefWidth="300.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" >
             <children>
-                <Label text="Login" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+                <Label text="Register" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
 
                 <TextField fx:id="usernameField" promptText="Username" prefWidth="250.0" maxWidth="400"/>
 
                 <PasswordField fx:id="passwordField" promptText="Password" prefWidth="250.0" maxWidth="400"/>
 
-                <Button fx:id="loginButton" text="Login" prefWidth="100.0" onAction="#login"/>
-                <Button fx:id="navigateToRegisterButton" text="Register" prefWidth="100.0" onAction="#navigateToRegisterButton"/>
+                <Button fx:id="registerButton" text="Register" prefWidth="100.0" onAction="#register"/>
+                <Button fx:id="navigateToRegisterButton" text="Login" prefWidth="100.0" onAction="#navigateToLoginButton"/>
 
                 <Label fx:id="errorMessage" textFill="red" visible="false"/>
             </children>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.librarymanagement.controller.BookController" prefHeight="600.0" prefWidth="800.0">
+    <children>
+        <!-- Title Section -->
+        <Label text="Manage Books" style="-fx-font-size: 24px; -fx-font-weight: bold;" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="20.0"/>
+
+        <!-- Input Section -->
+        <VBox spacing="15" alignment="CENTER" AnchorPane.topAnchor="70.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+            <TextField fx:id="titleField" promptText="Enter Book Title" prefWidth="300.0"/>
+            <TextField fx:id="authorField" promptText="Enter Author Name" prefWidth="300.0"/>
+            <TextField fx:id="isbnField" promptText="Enter ISBN" prefWidth="300.0"/>
+            <TextField fx:id="yearField" promptText="Enter Year of Publication" prefWidth="300.0"/>
+
+            <Button text="Add Book" onAction="#addBook" prefWidth="100.0" />
+            <Label fx:id="errorMessage" textFill="red" visible="false"/>
+        </VBox>
+
+        <!-- Book Table Section -->
+        <TableView fx:id="booksTable" layoutX="50.0" layoutY="250.0" prefWidth="700.0" prefHeight="200.0">
+            <columns>
+                <TableColumn fx:id="titleColumn" text="Title" prefWidth="200.0" />
+                <TableColumn fx:id="authorColumn" text="Author" prefWidth="150.0" />
+                <TableColumn fx:id="yearColumn" text="Year" prefWidth="100.0" />
+                <TableColumn fx:id="isbnColumn" text="ISBN" prefWidth="150.0" />
+            </columns>
+        </TableView>
+
+        <!-- Delete Button Section -->
+<!--        <Button text="Delete Selected Book" onAction="#deleteBook" layoutX="50.0" layoutY="470.0" prefWidth="200.0"/>-->
+    </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/javafx/18.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.librarymanagement.controller.PatronsController">
+    <!-- Top Section: Header -->
+    <top>
+        <Label text="Manage Patrons" style="-fx-font-size: 18; -fx-font-weight: bold;"
+               BorderPane.alignment="CENTER" />
+    </top>
+
+    <!-- Center Section: TableView -->
+    <center>
+        <VBox spacing="10" padding="10">
+            <!-- Search Field -->
+            <HBox spacing="10">
+                <Label text="Search:" style="-fx-font-size: 14;" />
+                <TextField fx:id="searchField" promptText="Enter patron name or email..." onKeyReleased="#onSearch" />
+                <Button text="Search" onAction="#onSearch" />
+            </HBox>
+
+            <!-- Table View -->
+            <TableView fx:id="patronsTable" prefHeight="400" prefWidth="600">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="ID" prefWidth="50" />
+                    <TableColumn fx:id="nameColumn" text="Name" prefWidth="200" />
+                    <TableColumn fx:id="emailColumn" text="Email" prefWidth="200" />
+                    <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="150" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- Bottom Section: Action Buttons -->
+    <bottom>
+        <HBox spacing="10" padding="10" BorderPane.alignment="CENTER">
+            <Button text="Add Patron" onAction="#onAddPatron" />
+            <Button text="Edit Patron" onAction="#onEditPatron" />
+            <Button text="Delete Patron" onAction="#onDeletePatron" />
+        </HBox>
+    </bottom>
+</BorderPane>

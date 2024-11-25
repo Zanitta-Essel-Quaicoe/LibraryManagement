@@ -5,6 +5,7 @@ module com.example.librarymanagement {
     requires net.synedra.validatorfx;
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
+    requires jbcrypt;
 
     opens com.example.librarymanagement to javafx.fxml;
     exports com.example.librarymanagement;
