@@ -1,21 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" prefHeight="300.0" prefWidth="400.0">
-    <children>
-        <VBox alignment="CENTER" spacing="20" layoutX="50.0" layoutY="50.0" prefWidth="300.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" >
-            <children>
-                <Label text="Register" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.librarymanagement.controller.DashboardController"
+            stylesheets="@style.css">
 
-                <TextField fx:id="usernameField" promptText="Username" prefWidth="250.0" maxWidth="400"/>
-
-                <PasswordField fx:id="passwordField" promptText="Password" prefWidth="250.0" maxWidth="400"/>
-
-                <Label fx:id="errorMessage" textFill="red" visible="false"/>
-            </children>
+    <!-- Header Section -->
+    <top>
+        <VBox alignment="CENTER" spacing="10" styleClass="header-section">
+            <Label text="Library Dashboard" styleClass="header-title"/>
+            <Label fx:id="welcomeMessage" styleClass="header-subtitle"/>
         </VBox>
-    </children>
-</AnchorPane>
+    </top>
+
+    <!-- Main Content Section -->
+    <center>
+        <GridPane alignment="CENTER" hgap="30" vgap="20">
+            <!-- Set Padding Correctly -->
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Total Books -->
+            <Label text="Total Books:" styleClass="metric-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <Label fx:id="totalBooksLabel" styleClass="metric-value" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <!-- Books Available -->
+            <Label text="Books Available:" styleClass="metric-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <Label fx:id="availableBooksLabel" styleClass="metric-value" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <!-- Books Borrowed -->
+            <Label text="Books Borrowed:" styleClass="metric-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <Label fx:id="borrowedBooksLabel" styleClass="metric-value" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <!-- Total Patrons -->
+            <Label text="Total Patrons:" styleClass="metric-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <Label fx:id="totalPatronsLabel" styleClass="metric-value" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+    </center>
+
+</BorderPane>

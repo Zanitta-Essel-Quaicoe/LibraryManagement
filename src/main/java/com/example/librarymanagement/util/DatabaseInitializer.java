@@ -61,8 +61,8 @@ public class DatabaseInitializer {
                 + "transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, "
                 + "due_date TIMESTAMP, "
                 + "return_date TIMESTAMP, "
-                + "FOREIGN KEY (book_id) REFERENCES books(id), "
-                + "FOREIGN KEY (patron_id) REFERENCES patrons(id)"
+                + "FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE, "
+                + "FOREIGN KEY (patron_id) REFERENCES patrons(id) ON DELETE CASCADE"
                 + ");";
 
         try (Statement statement = connection.createStatement()) {

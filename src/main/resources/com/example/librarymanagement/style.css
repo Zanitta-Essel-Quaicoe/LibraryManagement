@@ -1,0 +1,28 @@
+/* Header Styling */
+.header-section {
+    -fx-background-color: #f0f0f0;
+    -fx-padding: 20;
+}
+
+.header-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2a2a2a;
+}
+
+.header-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #555555;
+}
+
+/* Metrics Styling */
+.metric-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.metric-value {
+    -fx-font-size: 18px;
+    -fx-text-fill: #666666;
+}
